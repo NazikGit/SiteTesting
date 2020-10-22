@@ -1,0 +1,5 @@
+SiteTest\TestPlan.class
+SiteTest\WebForm.class
+SiteTest\SpringBootTest.class
+SiteTest\PageObject.class
+SiteTest\Utils.class
