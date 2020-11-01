@@ -16,15 +16,16 @@ public class TestPlan {
         System.setProperty("webdriver.chrome.driver", Utils.CHROME_DRIVER_LOCATION);
     }
 
- @Test
-    public void submitForm(){
+    @Test
+    public void submitForm() {
         driver.get(Utils.BASE_URL2);
         WebForm webForm = new WebForm(driver);
         webForm.EnterSearchText("Selenium");
         //webForm.pressSubmitButton();
     }
+
     @AfterClass
-    public static void cleanUp(){
+    public static void cleanUp() {
         driver.manage().deleteAllCookies();
         driver.close();
     }
