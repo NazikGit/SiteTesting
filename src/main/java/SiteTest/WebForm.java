@@ -23,7 +23,7 @@ public class WebForm extends PageObject {
     @FindBy(xpath = "//input[@id='UserPassword']")
     private WebElement Password;
 
-    @FindBy(xpath = "//body/div[1]/div[3]/div[1]/div[1]/div[1]/form[1]/div[4]/input[1]")
+    @FindBy(xpath = "//input[@type='submit']")
     private WebElement LogInButton;
 
     @FindBy(xpath = "//a[contains(text(),'logout')]")
