@@ -18,7 +18,6 @@ class TestPlanTest {
 
     WebForm webForm = new WebForm(driver);
     WebDriverWait waitForOne = new WebDriverWait(driver, 10);
-
     @SpringBootTest(properties = "spring.main.banner-mode=off")
 
     @Test
@@ -60,6 +59,7 @@ class TestPlanTest {
         webForm.Password("www");
         WebDriverWait wait = new WebDriverWait(driver,10);
         wait.until(ExpectedConditions.presenceOfElementLocated (By.xpath("//input[@type='submit']")));
+        //wait for element to appear
         webForm.LogInButton();
         String s = "Welcome, www!";
         assertEquals("Welcome, www!", s.substring(s.length() - "Welcome, www!".length()));
