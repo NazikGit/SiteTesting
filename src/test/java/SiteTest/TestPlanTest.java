@@ -1,6 +1,7 @@
 package SiteTest;
 
-import org.junit.After;
+import org.junit.jupiter.api.AfterAll;
+import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.Test;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
@@ -29,7 +30,7 @@ class TestPlanTest {
         webForm.openLearnThatSite();
         webForm.provideValidUser();
         webForm.checkGreetingMessage();
-        driver.manage().deleteAllCookies();
+        //    driver.manage().deleteAllCookies();
     }
 
     @Test
@@ -46,13 +47,16 @@ class TestPlanTest {
         webForm.checkGreetingMessage();
         webForm.changePasswordProvidingWrongPassword();
         webForm.checkValidationError();
+        //   driver.manage().deleteAllCookies();
+    }
+
+    @AfterEach
+    public void cleanUp() {
         driver.manage().deleteAllCookies();
     }
 
-    @After
-    public static void cleanUp() {
-        driver.manage().deleteAllCookies();
-        driver.quit();
-        cleanUp();
+    @AfterAll
+    public static void close() {
+        driver.close();
     }
 }
