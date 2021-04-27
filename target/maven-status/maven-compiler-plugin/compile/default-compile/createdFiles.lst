@@ -1,5 +1,5 @@
-SiteTest\TestPlan.class
 SiteTest\WebForm.class
 SiteTest\SpringBootTest.class
+UsersData\UserData.class
 SiteTest\PageObject.class
 SiteTest\Utils.class
